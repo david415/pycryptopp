@@ -144,6 +144,7 @@ trove_classifiers=[
 srcs = ['src/pycryptopp/_pycryptoppmodule.cpp',
         'src/pycryptopp/publickey/rsamodule.cpp',
         'src/pycryptopp/hash/sha256module.cpp',
+        'src/pycryptopp/hash/blake2module.cpp',
         'src/pycryptopp/cipher/aesmodule.cpp',
         'src/pycryptopp/cipher/xsalsa20module.cpp',
         ]
