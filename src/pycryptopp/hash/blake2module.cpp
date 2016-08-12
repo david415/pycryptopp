@@ -12,11 +12,11 @@ typedef int Py_ssize_t;
 
 /* from Crypto++ */
 #ifdef DISABLE_EMBEDDED_CRYPTOPP
-#include <cryptopp/sha.h>
+#include <cryptopp/blake2.h>
 #include <cryptopp/hex.h>
 #include <cryptopp/filters.h>
 #else
-#include <src-cryptopp/sha.h>
+#include <src-cryptopp/blake2.h>
 #include <src-cryptopp/hex.h>
 #include <src-cryptopp/filters.h>
 #endif
