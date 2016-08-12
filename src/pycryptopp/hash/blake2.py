@@ -19,8 +19,7 @@ def start_up_self_test():
     for i in range(0, 65):
         hx.update(chr(0xFE))
         hx.update(s[:64])
-    if hx.hexdigest().lower() != '5191c7841dd4e16aa454d40af924585dffc67157ffdbfd0236acddd07901629d':
-        #raise Error("pycryptopp failed startup self-test. Please run pycryptopp unit tests.")
-        print "hash %s != expected '5191c7841dd4e16aa454d40af924585dffc67157ffdbfd0236acddd07901629d'" % hx.hexdigest().lower()
+    if hx.hexdigest().lower() != '05cbea97a1f5371754103a524ee0929651885abf36cb4b6e6908c4769f0f9556':
+        raise Error("pycryptopp failed startup self-test. Please run pycryptopp unit tests.")
 
 start_up_self_test()
