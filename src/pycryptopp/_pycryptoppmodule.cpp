@@ -3,6 +3,7 @@
 #include "publickey/ecdsamodule.hpp"
 #include "publickey/rsamodule.hpp"
 #include "hash/sha256module.hpp"
+#include "hash/blake2module.hpp"
 #include "cipher/aesmodule.hpp"
 #include "cipher/xsalsa20module.hpp"
 
@@ -23,6 +24,7 @@ from pycryptopp import cipher\n\
 from pycryptopp.cipher import aes\n\
 from pycryptopp.cipher import xsalsa20\n\
 from pycryptopp import hash\n\
+from pycryptopp.hash import blake2\n\
 from pycryptopp.hash import sha256");
 
 static PyMethodDef _pycryptopp_functions[] = {
@@ -67,6 +69,7 @@ init_pycryptopp(void) {
     init_ecdsa(module);
     init_rsa(module);
     init_sha256(module);
+    init_blake2(module);
     init_aes(module);
     init_xsalsa20(module);
 }
