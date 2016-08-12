@@ -29,7 +29,7 @@ typedef struct {
     PyObject_HEAD
 
     /* internal */
-    CryptoPP::BLAKE2* h;
+    CryptoPP::BLAKE2s* h;
     PyStringObject* digest;
 } BLAKE2;
 
@@ -105,7 +105,7 @@ BLAKE2_new(PyTypeObject* type, PyObject *args, PyObject *kwdict) {
     BLAKE2* self = reinterpret_cast<BLAKE2*>(type->tp_alloc(type, 0));
     if (!self)
         return NULL;
-    self->h = new CryptoPP::BLAKE2();
+    self->h = new CryptoPP::BLAKE2s();
     if (!self->h)
         return PyErr_NoMemory();
     self->digest = NULL;
